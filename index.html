@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <title>Начните торговать</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="rectangle"></div>
+            <div class="enter">
+                <button class="enter-button" id="enter">Войти</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+    </header>
+    <div class="container">
+        <div class="items-form">
+            <div class="title">Начните торговать прямо сейчас</div>
+            <div class="check">
+                <div class="check-first"><img class="check__img-1" src="icons/check.png" alt="check">
+                    <div>Нет спреда — торгуйте с прозрачными и точными котировками</div>
+                </div>
+                <div class="check-second"><img class="check__img-2" src="icons/check.png" alt="check">
+                    <div>Достаточно депозита в $10, чтобы начать торговать</div>
+                </div>
+            </div>
+            <form action="/sections/main.html" method="POST">
+                <div class="input">
+                    <div class="custom-form">
+                        <label class="inp" for="email">
+                            <input id="email" type="text" name="email" placeholder=" " autocomplete="off">
+                            <span class="label">Ваш e-mail</span>
+                        </label>
+                        <label class="inp" for="password">
+                            <input id="password" type="text" name="password" placeholder=" " autocomplete="off"
+                                minlength="4">
+                            <span class="label">Придумайте пароль</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="currency">
+                    <div class="currency-text">Валюта для ввода и вывода средств</div>
+                    <div class="checkbox-group-blocks">
+                        <ul>
+                            <li><input id="btn-1" type="checkbox" checked="" onclick="selectCurrency(this.id)"><label
+                                    for="btn-1">P</label></li>
+                            <li><input id="btn-2" type="checkbox" onclick="selectCurrency(this.id)"><label
+                                    for="btn-2">S</label></li>
+                            <li><input id="btn-3" type="checkbox" onclick="selectCurrency(this.id)"><label
+                                    for="btn-3">E</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checkbox-form">
+                    <input class="checkbox__input checkbox" id="checkbox-1" type="checkbox" name="checkboxagree"
+                        onclick="isCanBeSubmitted()">
+                    <label class="checkbox-label" for="checkbox-1">Я совершеннолетний, ознакомился и принимаю солгашение
+                        об
+                        оказании услуг.</label>
+                </div>
+                <button class="mi_button" type="submit" id="submit" disabled onclick="sendData()">Зарегистрироваться
+                </button>
+            </form>
+        </div>
+        <div class="items-pictures">
+            <div class="image__left">
+                <div class="macbook"></div>
+                <div class="iphone"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
+
+</html>
